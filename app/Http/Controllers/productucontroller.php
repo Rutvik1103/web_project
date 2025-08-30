@@ -7,9 +7,7 @@ use Illuminate\Http\Request;
 
 class productucontroller extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
       $product = product::all();
