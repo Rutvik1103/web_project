@@ -21,9 +21,7 @@ class productucontroller extends Controller
         return view('acreate');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+  
     public function store(Request $request)
     {
         $product = new product;
@@ -34,26 +32,20 @@ class productucontroller extends Controller
         
     }
 
-    /**
-     * Display the specified resource.
-     */
+ 
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit(string $id)
     {
         $product = product::find($id);
         return view('aedit',compact('product'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+  
     public function update(Request $request, string $id)
     {
         $product = product::find($id);
@@ -62,9 +54,7 @@ class productucontroller extends Controller
         $product->save();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(string $id)
     {
         product::destroy($id);
